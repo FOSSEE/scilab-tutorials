@@ -60,3 +60,46 @@ disp(Mat_power_3, 'A^3');
 
 Mat_power_5 = A^5;
 disp(Mat_power_5,'A^5');
+
+
+//Range and size of matrices
+//Size of a matrix
+size_of_matrix = size(A);
+
+//Row and column size of a vector/matrix
+[row_size,column_size] = size(x);
+
+//Total number of elements in a matrix
+total_elements = length(A);
+
+//To extract an element of A
+Mat_element_31 = A(3,1);
+disp(Mat_element_31,'3rd row, 1st col element of A');
+
+//To extract a column of a matrix
+Mat_second_column = A(:,2);
+disp(Mat_second_column,'Second column of A');
+
+
+//To extract two columns of a matrix
+Mat_first_two_column = A(:,1:2);
+disp(Mat_first_two_column,'First two columns of A');
+
+//To extract a row of a matrix
+Mat_third_row = A(3,:);
+disp(Mat_third_row,'Third row of A');
+
+
+//Construction of special matrices
+//Identity matrix construction
+Identity_3 = eye(3,3);
+disp(Identity_3,'3 X 3 Identity matrix');
+
+//Zero matrix construction
+Zero_32 = zeros(3,2);
+disp(Zero_32,'3 X 2 Zero matrix');
+
+//All ones matrix
+Ones_45 = ones(4,5);
+disp(Ones_45,'4 X 5 all ones matrix');
+
