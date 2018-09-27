@@ -15,6 +15,6 @@ x4 = Data(:,5);
 //Plotting y versus x1
 plot(y,x1);
 
-//For labelling axes and adding a title to the plot 
-xtitle('Plot of y versus x1','Time','Length');
+
+
 
