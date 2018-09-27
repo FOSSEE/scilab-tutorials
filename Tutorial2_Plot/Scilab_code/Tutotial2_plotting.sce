@@ -3,7 +3,7 @@ clear
 clc
 
 //Import data from file
-Data = csvRead('/home/chayan/Documents/scilab-tutorials/Tutorial2/Data/Tut2_data1.csv');
+Data = csvRead('/home/chayan/Documents/scilab-tutorials/Tutorial2_Plot/Data/Tut2_data1.csv');
 
 //Segregate the data into variables
 y = Data(:,1);

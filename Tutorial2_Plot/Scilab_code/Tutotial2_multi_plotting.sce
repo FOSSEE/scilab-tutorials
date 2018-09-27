@@ -3,7 +3,7 @@ clear
 clc
 
 //Import data from file
-Data = csvRead('/home/chayan/Documents/scilab-tutorials/Tutorial2/Data/Tut2_data1.csv');
+Data = csvRead('/home/chayan/Documents/scilab-tutorials/Tutorial2_Plot/Data/Tut2_data1.csv');
 
 //Segregate the data into variables
 y = Data(:,1);
@@ -31,5 +31,9 @@ xtitle('Plot of Time versus Length_x1 and Length_x3','Time','Length');
 //legends(['Length of x1','Length of x3'],[-1,2]); //Default case 
 //legends(['Length of x1','Length of x3'],[-1,2],opt="ur"); //Position of the legend box
 legends(['Length of x1','Length of x3'],[-1,2],opt="ur",font_size=2); //Font size of the legends
+
+
+
+
 
 
