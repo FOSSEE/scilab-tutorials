@@ -6,7 +6,7 @@ clc
 exec mymean.sci;
 exec mystdev.sci;
 
-//Import data from file
+//Import data from csv file
 Data = csvRead('/home/chayan/Documents/scilab-tutorials/Tutorial1/Data/Tut1_data1.csv');
 x = Data(:,1);
 y = Data(:,2);
@@ -21,4 +21,9 @@ standard_deviation_of_Data_x= mystdev(x,mean_of_Data_x);
 
 //Display mean and standard deviation in command window
 disp(mean_of_Data_x,'Mean of x',standard_deviation_of_Data_x,'Standard deviation of x')
+
+
+//Importing data from dat file
+Mat = fscanfMat('Data/Tut1_data2.dat');
+disp(Mat,'Data in the file');
 
