@@ -5,16 +5,14 @@ clc
 
 
 //The nonlinear equation for which solutions are sought
-function y = nonlinear_func(x)
-  y = cos(x)*sin(x) - tan(x) + 1
-endfunction
+exec func.sci;
 
 
 //Initial guess for the solution 
 x0 = 0;
 
 //Computation of solution using fsolve
-y_result = fsolve(x0,nonlinear_func);
+y_result = fsolve(x0,func);
 //Display the solution in command window
 disp(y_result,'Solution of the equation')
 
