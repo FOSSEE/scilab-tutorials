@@ -1,37 +1,36 @@
-//This script demonstrate multi-plotting in Scilab
+//This script demonstrates multi-plotting in Scilab
 clear 
 clc
+exec change_plot_attribs.sci;
 
 //Import data from file
 Data = csvRead('/home/chayan/Documents/scilab-tutorials/Tutorial2_Plot/Data/Tut2_data1.csv');
 
 //Segregate the data into variables
-y = Data(:,1);
-x = [Data(:,2) Data(:,4)]
-
-//Fixing the range of plot
-//Range is defined by [xmin,xmax,ymin,ymax]
-range_of_plot = [-10,1e-05,20,10e-05]
+t = Data(:,1);
+x = [Data(:,2:4)]
 
 //Style of plot
-//Stricly positive value represent the color
-//Negative or zero value means given curve points are drawn using marks 
-//For color of marks use polyline property
-style_plot = [-1,2] 
+style_plot = [1,2,4]
+
+//Fixing the range of plot
+//Range is defined by [xmin,ymin,xmax,ymax]
+range_of_plot = [1,-1e-5,15,8e-05]; 
 
 //Plotting y versus two data sets
-plot2d(y,x,style_plot,rect=range_of_plot); 
-
-
-//For labelling axes and adding a title to the plot 
-xtitle('Plot of Time versus Length_x1 and Length_x3','Time','Length');
-
-
+//plot2d(t,x,style_plot); 
+plot2d(t,x,style_plot,rect=range_of_plot); 
+ 
+//Font size and labels for legends
 //For legends "ur" for upper right
-//legends(['Length of x1','Length of x3'],[-1,2]); //Default case 
-//legends(['Length of x1','Length of x3'],[-1,2],opt="ur"); //Position of the legend box
-legends(['Length of x1','Length of x3'],[-1,2],opt="ur",font_size=2); //Font size of the legends
+legends(['x1','x2', 'x3'],style_plot,opt="ur",font_size=2); 
 
+//Call function to change plot attributes
+change_plot_attribs('Time','Data','Data versus Time',5,5,3) 
+
+//For thickness of the plots
+attrib = gcf();
+attrib.children(2).children(1).children.thickness = 3;
 
 
 

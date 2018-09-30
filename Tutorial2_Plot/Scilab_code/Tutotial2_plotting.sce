@@ -1,4 +1,4 @@
-//This script demonstrate plotting in Scilab
+//This script demonstrate basic plot command in Scilab
 clear 
 clc
 
@@ -6,15 +6,11 @@ clc
 Data = csvRead('/home/chayan/Documents/scilab-tutorials/Tutorial2_Plot/Data/Tut2_data1.csv');
 
 //Segregate the data into variables
-y = Data(:,1);
-x1 = Data(:,2);
-x2 = Data(:,3);
-x3 = Data(:,4);
-x4 = Data(:,5);
+t = Data(:,1);
+x = Data(:,2);
 
-//Plotting y versus x1
-plot(y,x1);
+//Plotting x versus t
+plot(t,x);
 
-
-
+xtitle('A x versus t plot','Time','Data')
 

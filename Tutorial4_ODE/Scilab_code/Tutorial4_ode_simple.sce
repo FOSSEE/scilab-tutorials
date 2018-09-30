@@ -1,9 +1,11 @@
 //This script demonstrates the use of ODE solver
+clear 
+clc
 
 //Definition the function. 
 //The function is dy/dt = cos(t)*sin(t) - tan(t) + 1
 function ydot = func(t,y)
-  ydot = cos(t)*sin(t) - tan(t) + 1
+  ydot = t^2*exp(-2*t) + y
 endfunction
 
 //Initial condition of the problem, a scalar or vector

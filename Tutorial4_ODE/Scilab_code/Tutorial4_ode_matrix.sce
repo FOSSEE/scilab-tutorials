@@ -1,4 +1,6 @@
 //This script demonstrates the use of ODE solver when matrix is involved
+clear 
+clc
 
 //Definition of the function
 function ydot = func(t,y)

@@ -2,6 +2,8 @@
 clear 
 clc
 
+exec change_plot_attribs.sci;
+
 //Import data from file
 Data = csvRead('/home/chayan/Documents/scilab-tutorials/Tutorial2_Plot/Data/Tut2_data1.csv');
 
@@ -14,16 +16,9 @@ x = Data(:,2)
 fig1 = scf(1); 
 plot(t,x,'Linewidth',3);
 
-//Adding title, xlabels and ylabels
-//Changing thickness and textsize in plot
-attrib_axes = gca(); //Attributes of axes of active handle
-attrib_axes.x_label.text = 'Time'; //X-label
-attrib_axes.y_label.text = 'Data'; //Y-label
-attrib_axes.title.text = 'x versus t'; //Title of the plot
-attrib_axes.x_label.font_size = 5; //X_label font size
-attrib_axes.y_label.font_size = 5; //Y_label font size
-attrib_axes.title.font_size = 5; //Title font size
-attrib_axes.font_size = 4; //Font size of x-axis and y-axis
+//Call function to change plot attributes
+//Arguments (x_label,y_label,title,label_size,title_size,fontsize)
+change_plot_attribs('Time','Data','x versus t',7,6,3) 
 
 //Export Figure 1 as svg file
 xs2svg(fig1,'plot_y_versus_x1');
