@@ -1,1 +1,1 @@
-# Matrix manipulation
+# Basics of Scilab
