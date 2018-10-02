@@ -27,7 +27,10 @@ disp(error,'The error after least square approximation')
 
 
 // Plot of measured data and fitted data versus time
-fitted_data = fit_function(time, coeff_optimal);
-plot2d(time, [measured_data,fitted_data], [-1,2])
+// a small graphic 
+fit_time = 0:0.01:15;
+fitted_data = fit_function(fit_time, coeff_optimal);
+plot2d(time, measured_data, -1)
+plot2d(fit_time, fitted_data, 2)
 legend(["measure points", "fitted curve"],[-1,2],"ur");
 xtitle("a simple fit with leastsq","time","data")

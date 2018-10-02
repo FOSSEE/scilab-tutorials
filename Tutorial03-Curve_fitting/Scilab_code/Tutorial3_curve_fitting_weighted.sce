@@ -24,14 +24,16 @@ weight_matrix = [1 1 1 1 1 1 5 5 5 5 5 5 5]';
 initial_condition = [1 ; 1];
 
 //f is the function value at optimal x (xopt)
-[func_value_xopt,x_optimal] = leastsq(list(errorfunweight,time,measured_data,weight_matrix),initial_condition)
+[func_value_xopt,coeff_optimal] = leastsq(list(errorfunweight,time,measured_data,weight_matrix),initial_condition)
 
-error = errorfunweight(x_optimal,time,measured_data,weight_matrix)
+error = errorfunweight(coeff_optimal,time,measured_data,weight_matrix)
 disp(error,'The error after least square approximation')
 
 
 // a small graphic 
-fitted_data = fit_function(time, x_optimal);
-plot2d(time, [measured_data,fitted_data], [-1,2])
+fit_time = 0:0.01:15;
+fitted_data = fit_function(fit_time, coeff_optimal);
+plot2d(time, measured_data, -1)
+plot2d(fit_time, fitted_data, 2)
 legend(["measure points", "fitted curve"],[-1,2],"ur");
 xtitle("a simple fit with leastsq","time","data")
