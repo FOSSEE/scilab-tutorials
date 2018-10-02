@@ -20,4 +20,6 @@ stdev_of_x= mystdev(x,mean_of_x);
 //Data to be exported (It can be a scalar, vector or matrix)
 data_to_write = [mean_of_x stdev_of_x];
 //Export data to a csv file
-csvWrite(data_to_write,'../Data/Tut1_data3.csv')
+csvWrite(data_to_write,'../Data/Result.csv')
+
+

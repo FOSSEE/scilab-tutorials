@@ -1,0 +1,23 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+\title{Problems for Tutorial-01: Basics of Scilab}
+\date{}
+\maketitle
+\begin{enumerate}
+\item Write a Scilab script to compute the following:
+\begin{enumerate}
+\item $n_1 = \sqrt{(Ax - y)^T(Ax - y)}$
+\item $n_2 = $ Sum of elements of $(Ax-b)$ (Hint: Use sum command)
+\item $n_3 = $ Sum of square of the elements of $(Ax - b)$ (Hint: Use for loop)
+\end{enumerate}
+where $A = \begin{bmatrix}a & a^2 & a^3\\b & b^2 & b^3\\c & c^2 & c^3\end{bmatrix}$, 
+$a = 1, b = 2, c = 3$, $x = \begin{bmatrix}1\\1\\1\end{bmatrix}$, 
+$y = \begin{bmatrix}4\\12\\36\end{bmatrix}$.
+\item Write a Scilab script to save the solution of Problem $1$, i.e., 
+$\begin{bmatrix}n_1 & n_2 & n_3\end{bmatrix}$ as Problem2.csv file.
+\end{enumerate}
+\end{document}

@@ -9,7 +9,7 @@ exec fit_function.sci;
 exec errorfunweight.sci;
 
 //Read measured data
-Data = csvRead('/home/chayan/Documents/scilab-tutorials/Tutorial3_Curve_fitting/Data/Tut3_Data.csv')
+Data = csvRead('../Data/Tut3_Data.csv')
 //Time stamp
 time = Data(:,1);
 //Measured output

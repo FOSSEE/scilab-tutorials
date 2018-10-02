@@ -4,7 +4,7 @@ clc
 exec change_plot_attribs.sci;
 
 //Import data from file
-Data = csvRead('/home/chayan/Documents/scilab-tutorials/Tutorial2_Plot/Data/Tut2_data1.csv');
+Data = csvRead('../Data/Tut2_data1.csv');
 
 //Segregate the data into variables
 t = Data(:,1);
