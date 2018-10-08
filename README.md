@@ -2,7 +2,7 @@
 *Prepared by Chayan Bhawal and P Sunthar, IIT Bombay*
 
 
-These tutorials are meant for any begginer to quickly understand and 
+These tutorials are meant for any beginner to quickly understand and 
 carry out some frequently employed tasks with [Scilab](https://www.scilab.org).
 They are aimed at teachers and students in STEM (Science, Technology,
 Engineering, and Mathematics).
